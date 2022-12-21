@@ -2,6 +2,7 @@ package ru.nucodelabs.kfx.core
 
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
+import javafx.scene.Node
 import javafx.stage.Stage
 import java.net.URL
 import java.util.*
@@ -10,7 +11,7 @@ import java.util.*
  * Controller which have to know how to get stage and also it runs fxScriptInit which can be defined in related FXML file
  * @param N type of root node
  */
-abstract class AbstractController<N : Sceneable> : Initializable {
+abstract class AbstractViewController<N : Node> : Initializable {
 
     @FXML
     private var fxScriptInit: Runnable = Runnable {}
