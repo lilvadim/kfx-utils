@@ -14,7 +14,7 @@ import java.util.*
 abstract class AbstractViewController<N : Node> : Initializable {
 
     @FXML
-    private var fxScriptInit: Runnable = Runnable {}
+    protected var fxScriptInit: Runnable = Runnable {}
 
     /**
      * Root node FXML-injected
