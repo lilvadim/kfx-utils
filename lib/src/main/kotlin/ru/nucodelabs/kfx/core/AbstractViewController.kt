@@ -8,7 +8,10 @@ import java.net.URL
 import java.util.*
 
 /**
- * Controller which have to know how to get stage and also it runs fxScriptInit which can be defined in related FXML file
+ * Abstract JavaFX controller which already implements `Initializable`.
+ * It runs fxScriptInit which can be defined in related FXML file using `fx:script` tag.
+ * To use this controller you have to set `fx:id` attribute to `"root"` in root node of corresponding FXML-view.
+ * Then you can obtain root node via property `root` and you can try to obtain stage via `stage` property.
  * @param N type of root node
  */
 abstract class AbstractViewController<N : Node> : Initializable {

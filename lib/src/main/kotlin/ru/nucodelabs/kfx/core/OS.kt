@@ -1,5 +1,8 @@
 package ru.nucodelabs.kfx.core
 
+/**
+ * Utility object that tries to define current OS and offers some DSL syntax to run OS-specific blocks of code
+ */
 object OS {
     val osNameNormalized = System.getProperty("os.name").lowercase()
 
