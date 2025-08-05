@@ -5,6 +5,8 @@ plugins {
     id 'maven-publish'
 }
 
+version = '0.2.2'
+
 ext {
     jfxVersion = '19'
 }
