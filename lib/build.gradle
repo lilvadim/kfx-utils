@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.6.21'
+    id 'org.jetbrains.kotlin.jvm' version '2.2.0'
     id 'java-library'
     id 'org.openjfx.javafxplugin' version '0.0.13'
 }
@@ -35,12 +35,12 @@ java {
 dependencies {
     implementation platform('org.jetbrains.kotlin:kotlin-bom')
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-    implementation 'com.google.guava:guava:31.0.1-jre'
 
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
     testImplementation "org.openjfx:javafx:${jfxVersion}"
 
     api "org.openjfx:javafx:${jfxVersion}"
-    api group: 'com.google.inject', name: 'guice', version: '5.1.0'
+    api group: 'com.google.inject', name: 'guice', version: '7.0.0'
+    api 'no.tornado:tornadofx:1.7.20'
 }

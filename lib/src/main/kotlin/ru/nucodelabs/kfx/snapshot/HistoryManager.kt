@@ -1,7 +1,7 @@
 package ru.nucodelabs.kfx.snapshot
 
 import ru.nucodelabs.kfx.snapshot.Snapshot.Originator
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class HistoryManager<T> @Inject constructor(private val originator: Originator<T>) {
     private var history: MutableList<Snapshot<T>> = mutableListOf()
@@ -24,9 +24,8 @@ class HistoryManager<T> @Inject constructor(private val originator: Originator<T
     /**
      * Makes a snapshot after executing block
      */
-    // TODO: () -> Unit instead of Runnable
-    fun snapshotAfter(block: Runnable) {
-        block.run()
+    fun snapshotAfter(block: () -> Unit) {
+        block()
         snapshot()
     }
 

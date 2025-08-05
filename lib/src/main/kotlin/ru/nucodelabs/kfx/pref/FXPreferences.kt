@@ -2,7 +2,7 @@ package ru.nucodelabs.kfx.pref
 
 import javafx.beans.property.*
 import java.util.prefs.Preferences
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 /**
  * Helps to save properties values in Preferences object
